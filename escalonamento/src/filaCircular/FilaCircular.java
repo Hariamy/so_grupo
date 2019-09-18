@@ -2,6 +2,7 @@ package filaCircular;
 
 import processo.Processo;
 
+import java.lang.annotation.Documented;
 import java.util.ArrayList;
 
 public class FilaCircular {
@@ -12,10 +13,19 @@ public class FilaCircular {
         this.ready = new ArrayList<>();
     }
 
+    /**
+     * ele adiciona processo
+     * @param processo: processo eh um borogodo que sera usado paraborogoda
+     */
     private synchronized void addProcesso(Processo processo) {
+       //lallll
         ready.add(processo);
     }
 
+    /**
+     * Esse metodo processo faz tal coisa
+     * @return uma listade borogosdo
+     */
     private synchronized Processo getProcesso() {
 
         if (!ready.isEmpty()) {
@@ -32,10 +42,6 @@ public class FilaCircular {
 
         }
         return null;
-    }
-
-    public int getSize() {
-        return ready.size();
     }
 
     public synchronized Processo modify(Processo processo) {

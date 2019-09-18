@@ -4,7 +4,7 @@ import processo.Processo;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
-public class Main extends Throwable{
+public class Main {
 
     public static void main(String[] args) {
         final FilaCircular ready = new FilaCircular();
@@ -23,15 +23,21 @@ public class Main extends Throwable{
         s4.start();
         s5.start();
 
+        int iteracao = 0;
         while (true) {
             Processo p = ready.modify(null);
             if (p != null) {
-                p.start();
+                if (p.getIniciada()) p.resume();
+                else p.start();
 
                 try {
+                    iteracao += 1;
+                    System.out.println("{ EXECUTANDO QUANTUM " + quantum + " COM " + iteracao + " }");
                     TimeUnit.MILLISECONDS.sleep(quantum);
-                    p.stop();
-                    ready.modify(p);
+                    if (p.isAlive()) {
+                        p.suspend();
+                        ready.modify(p);
+                    }
                 }
                 catch (InterruptedException e) {
                     System.out.println(e);

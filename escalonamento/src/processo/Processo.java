@@ -1,14 +1,13 @@
 package processo;
 
-import java.util.concurrent.TimeUnit;
 
 public class Processo extends Thread {
     private int numero;
-    private long inicio;
-    private long fim;
+    private boolean iniciada;
 
     public Processo(int numero) {
         this.numero = numero;
+        this.iniciada = false;
     }
 
     private void esperar() {
@@ -20,23 +19,17 @@ public class Processo extends Thread {
         }
     }
 
-    public void setInicio() {
-        this.inicio = System.nanoTime();
-    }
 
-    public void setFim() {
-        this.fim = System.nanoTime();
-    }
-
-    public long getTurnaround() {
-        return TimeUnit.MILLISECONDS.convert(fim-inicio, TimeUnit.NANOSECONDS);
+    public boolean getIniciada() {
+        return iniciada;
     }
 
     @Override
     public void run() {
-        System.out.println("Start thread " + numero);
+        this.iniciada = true;
+        System.out.println("( START THREAD " + numero + " )");
         for (int i = 0; i < numero; i++) {
-            System.out.println("[PROCESS "+numero+"]" + " - "+i);
+            System.out.println("[PROCESS " + numero + "]" + " - " + i);
             esperar();
         }
     }

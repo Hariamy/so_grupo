@@ -13,14 +13,14 @@ public class Simulador extends Thread{
     public Simulador(int tempo, FilaCircular ready) {
         this.processo = new Processo(tempo);
         this.valor = (int)(Math.random()*(500 - 100) + 100);
-        System.out.println(valor + " contagem "+tempo);
+
+        System.out.println("| " + valor + " | ENTRADA NA FILA READ DO PROCESSO " + tempo);
         this.ready = ready;
     }
 
     private void esperar() {
         try {
             sleep(this.valor);
-            System.out.println(valor + " contagem ");
         }
         catch (InterruptedException e) {
             System.out.println(e);
