@@ -27,6 +27,10 @@ public class Simulador extends Thread{
         }
     }
 
+    public Processo getProcesso() {
+        return processo;
+    }
+
     @Override
     public void run() {
         esperar();

@@ -24,16 +24,21 @@ public class Main {
         s5.start();
 
         int iteracao = 0;
-        while (true) {
+        int count = 0;
+        while (count <= 10000000) {
+            count += 1;
             Processo p = ready.modify(null);
             if (p != null) {
-                if (p.getIniciada()) p.resume();
-                else p.start();
-
                 try {
+                    if (p.getIniciada()) p.resume();
+                    else p.start();
+
                     iteracao += 1;
                     System.out.println("{ EXECUTANDO QUANTUM " + quantum + " COM " + iteracao + " }");
+                    System.out.println(p);
+
                     TimeUnit.MILLISECONDS.sleep(quantum);
+
                     if (p.isAlive()) {
                         p.suspend();
                         ready.modify(p);
@@ -44,14 +49,11 @@ public class Main {
                 }
             }
         }
-    }
-
-    private void esperar(int tempo) {
-        try {
-            TimeUnit.MILLISECONDS.sleep(tempo);
-        }
-        catch (InterruptedException e) {
-            System.out.println(e);
-        }
+        System.out.println("\nTERMINOU A ITERAÇÃO");
+        System.out.println(s1.getProcesso() + " Turnaround: " + s1.getProcesso().turnaround());
+        System.out.println(s2.getProcesso() + " Turnaround: " + s2.getProcesso().turnaround());
+        System.out.println(s3.getProcesso() + " Turnaround: " + s3.getProcesso().turnaround());
+        System.out.println(s4.getProcesso() + " Turnaround: " + s4.getProcesso().turnaround());
+        System.out.println(s5.getProcesso() + " Turnaround: " + s5.getProcesso().turnaround());
     }
 }
