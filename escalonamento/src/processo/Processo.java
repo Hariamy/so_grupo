@@ -29,13 +29,16 @@ public class Processo extends Thread {
         return iniciada;
     }
 
+    public void setStartTime() {
+        this.startTime = System.nanoTime();
+    }
+
     @Override
     public void run() {
-        this.startTime = System.nanoTime();
         this.iniciada = true;
         System.out.println("( START PROCESS " + numero + " )");
         for (int i = 0; i < numero; i++) {
-            System.out.println("[PROCESS " + numero + "]" + " - " + i);
+            //System.out.println("[PROCESS " + numero + "]" + " - " + i);
             esperar();
         }
         this.endTime = System.nanoTime();

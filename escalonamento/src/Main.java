@@ -1,59 +1,50 @@
 import filaCircular.FilaCircular;
 import processo.Processo;
+import simulador.Simulador;
 
-import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
-
-    public static void main(String[] args) {
-        final FilaCircular ready = new FilaCircular();
-
-        int quantum = (int)(Math.random()*(500 - 100) + 100);
-
-        Simulador s1 = new Simulador(100, ready);
-        Simulador s2 = new Simulador(200, ready);
-        Simulador s3 = new Simulador(300, ready);
-        Simulador s4 = new Simulador(400, ready);
-        Simulador s5 = new Simulador(500, ready);
-
-        s1.start();
-        s2.start();
-        s3.start();
-        s4.start();
-        s5.start();
-
-        int iteracao = 0;
-        int count = 0;
-        while (count <= 10000000) {
-            count += 1;
-            Processo p = ready.modify(null);
-            if (p != null) {
-                try {
-                    if (p.getIniciada()) p.resume();
-                    else p.start();
-
-                    iteracao += 1;
-                    System.out.println("{ EXECUTANDO QUANTUM " + quantum + " COM " + iteracao + " }");
-                    System.out.println(p);
-
-                    TimeUnit.MILLISECONDS.sleep(quantum);
-
-                    if (p.isAlive()) {
-                        p.suspend();
-                        ready.modify(p);
-                    }
-                }
-                catch (InterruptedException e) {
-                    System.out.println(e);
-                }
-            }
+    private static void esperar() {
+        try {
+            TimeUnit.MILLISECONDS.sleep(10000);
         }
-        System.out.println("\nTERMINOU A ITERAÇÃO");
-        System.out.println(s1.getProcesso() + " Turnaround: " + s1.getProcesso().turnaround());
-        System.out.println(s2.getProcesso() + " Turnaround: " + s2.getProcesso().turnaround());
-        System.out.println(s3.getProcesso() + " Turnaround: " + s3.getProcesso().turnaround());
-        System.out.println(s4.getProcesso() + " Turnaround: " + s4.getProcesso().turnaround());
-        System.out.println(s5.getProcesso() + " Turnaround: " + s5.getProcesso().turnaround());
+        catch (InterruptedException e) {
+            System.out.println(e);
+        }
+    }
+    public static void main(String[] args) {
+        RoundRobin roundRobin1 = new RoundRobin();
+        RoundRobin roundRobin2 = new RoundRobin();
+        RoundRobin roundRobin3 = new RoundRobin();
+        RoundRobin roundRobin4 = new RoundRobin();
+        RoundRobin roundRobin5 = new RoundRobin();
+        FCFS fcfs1 = new FCFS();
+        FCFS fcfs2 = new FCFS();
+        FCFS fcfs3 = new FCFS();
+        FCFS fcfs4 = new FCFS();
+        FCFS fcfs5 = new FCFS();
+
+        roundRobin1.simular();
+        esperar();
+        roundRobin2.simular();
+        esperar();
+        roundRobin3.simular();
+        esperar();
+        roundRobin4.simular();
+        esperar();
+        roundRobin5.simular();
+        esperar();
+
+
+        fcfs1.simular();
+        esperar();
+        fcfs2.simular();
+        esperar();
+        fcfs3.simular();
+        esperar();
+        fcfs4.simular();
+        esperar();
+        fcfs5.simular();
     }
 }

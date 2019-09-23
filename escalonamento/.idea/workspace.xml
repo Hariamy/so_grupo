@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bb761a6-96de-4d0f-87da-a81a0f82b2f5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/FCFS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RoundRobin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/escalonamento/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/escalonamento/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/escalonamento/Simulador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/escalonamento/Simulador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/escalonamento/filaCircular/FilaCircular.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/escalonamento/filaCircular/FilaCircular.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/escalonamento/Simulador.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/escalonamento/processo/Processo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/escalonamento/processo/Processo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Simulador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Simulador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulador/Simulador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/processo/Processo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/processo/Processo.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,6 +88,7 @@
       <workItem from="1568383323692" duration="1047000" />
       <workItem from="1568829063749" duration="6096000" />
       <workItem from="1569006824167" duration="2526000" />
+      <workItem from="1569255229798" duration="2667000" />
     </task>
     <servers />
   </component>

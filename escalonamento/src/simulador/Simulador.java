@@ -1,3 +1,5 @@
+package simulador;
+
 import filaCircular.FilaCircular;
 import processo.Processo;
 
@@ -34,6 +36,7 @@ public class Simulador extends Thread{
     @Override
     public void run() {
         esperar();
+        this.processo.setStartTime();
         ready.modify(this.processo);
     }
 }
