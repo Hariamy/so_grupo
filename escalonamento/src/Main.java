@@ -26,25 +26,15 @@ public class Main {
         FCFS fcfs5 = new FCFS();
 
         roundRobin1.simular();
-        esperar();
         roundRobin2.simular();
-        esperar();
         roundRobin3.simular();
-        esperar();
         roundRobin4.simular();
-        esperar();
         roundRobin5.simular();
-        esperar();
-
 
         fcfs1.simular();
-        esperar();
         fcfs2.simular();
-        esperar();
         fcfs3.simular();
-        esperar();
         fcfs4.simular();
-        esperar();
         fcfs5.simular();
     }
 }

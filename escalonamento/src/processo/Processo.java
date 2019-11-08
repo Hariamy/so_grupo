@@ -22,7 +22,7 @@ public class Processo extends Thread {
     }
 
     public long turnaround() {
-        return (endTime - startTime)/10000000;
+        return (endTime - startTime)/1000000;
     }
 
     public boolean getIniciada() {
@@ -36,7 +36,8 @@ public class Processo extends Thread {
     @Override
     public void run() {
         this.iniciada = true;
-        System.out.println("( START PROCESS " + numero + " )");
+
+        //System.out.println("( START PROCESS " + numero + " )");
         for (int i = 0; i < numero; i++) {
             //System.out.println("[PROCESS " + numero + "]" + " - " + i);
             esperar();

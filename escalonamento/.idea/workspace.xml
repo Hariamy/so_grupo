@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bb761a6-96de-4d0f-87da-a81a0f82b2f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/FCFS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RoundRobin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/escalonamento/FCFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/escalonamento/FCFS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/escalonamento/META-INF/escalonamento.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/escalonamento/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/escalonamento/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/escalonamento/Simulador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/escalonamento/RoundRobin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/escalonamento/RoundRobin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/escalonamento/filaCircular/FilaCircular.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/escalonamento/filaCircular/FilaCircular.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/escalonamento/processo/Processo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/escalonamento/processo/Processo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/escalonamento/simulador/Simulador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/escalonamento/simulador/Simulador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FCFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FCFS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Simulador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulador/Simulador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RoundRobin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RoundRobin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/processo/Processo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/processo/Processo.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,10 +49,12 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -64,7 +70,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH" value="/usr/lib/jvm/java-1.11.0-openjdk-amd64" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="escalonamento" />
@@ -89,6 +95,8 @@
       <workItem from="1568829063749" duration="6096000" />
       <workItem from="1569006824167" duration="2526000" />
       <workItem from="1569255229798" duration="2667000" />
+      <workItem from="1573172724435" duration="3909000" />
+      <workItem from="1573180008544" duration="173000" />
     </task>
     <servers />
   </component>
